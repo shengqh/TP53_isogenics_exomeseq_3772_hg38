@@ -1,0 +1,47 @@
+#!/bin/bash
+#SBATCH --mail-user=quanhu.sheng.1@vumc.org
+#SBATCH --mail-type=FAIL
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --time=48:00:00
+#SBATCH --mem=44G
+#SBATCH --constraint=haswell
+#SBATCH -o /scratch/cqs/shengq2/jennifer/20200407_lindsay_exomeseq_3772_hg38/bwa_refine_nosoftclip_gatk4_CNV_Germline_05_GermlineCNVCaller_2_scatterCall/log/lindsay_exomeseq_3772_ITER_047_gcc.log
+
+if [ -n "${SLURM_JOB_ID}" ] ; then
+  smemwatch -k 99 -d 50 $$ &
+fi
+
+
+
+
+
+
+set -o pipefail
+
+cd '/scratch/cqs/shengq2/jennifer/20200407_lindsay_exomeseq_3772_hg38/bwa_refine_nosoftclip_gatk4_CNV_Germline_05_GermlineCNVCaller_2_scatterCall/result/lindsay_exomeseq_3772_ITER_047'
+
+
+if [[ !(1 -eq $1) ]]; then
+  if [[ ( -s gcc-calls ) || ( -d gcc-calls ) ]]; then
+    echo job has already been done. if you want to do again, delete /scratch/cqs/shengq2/jennifer/20200407_lindsay_exomeseq_3772_hg38/bwa_refine_nosoftclip_gatk4_CNV_Germline_05_GermlineCNVCaller_2_scatterCall/result/lindsay_exomeseq_3772_ITER_047/gcc-calls and submit job again.
+    exit 0
+  fi
+fi
+
+echo GATK4::GermlineCNVCallerScatter_start=`date`
+echo working in /scratch/cqs/shengq2/jennifer/20200407_lindsay_exomeseq_3772_hg38/bwa_refine_nosoftclip_gatk4_CNV_Germline_05_GermlineCNVCaller_2_scatterCall/result/lindsay_exomeseq_3772_ITER_047 ...
+ 
+
+export R_LIBS=
+export PYTHONPATH=
+export JAVA_HOME=
+ 
+
+
+singularity exec -c -B /gpfs23,/scratch,/gpfs52,/data,/home,/tmp -e /data/cqs/softwares/singularity/cqs-gatk4.simg  bash /scratch/cqs/shengq2/jennifer/20200407_lindsay_exomeseq_3772_hg38/bwa_refine_nosoftclip_gatk4_CNV_Germline_05_GermlineCNVCaller_2_scatterCall/pbs/lindsay_exomeseq_3772_ITER_047_gcc.pbs.sh 
+
+echo GATK4::GermlineCNVCallerScatter_end=`date`
+
+exit 0
+

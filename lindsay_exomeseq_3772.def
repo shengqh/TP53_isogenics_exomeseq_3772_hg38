@@ -1,0 +1,418 @@
+$VAR1 = {
+          'perform_featureCounts' => 0,
+          'covered_bed' => '/scratch/cqs/references/exomeseq/Twist/Twist_Exome_Target_hg38.slop50.bed',
+          'mutect_docker_command' => 'singularity exec -c -B /gpfs23,/scratch,/gpfs52,/data,/home,/tmp -e /data/cqs/softwares/singularity/mutect.sif ',
+          'saf_file' => '/scratch/cqs/references/exomeseq/Twist/Twist_Exome_Target_hg38.slop50.name.saf',
+          'groups' => {
+                        'All' => [
+                                   'P_60B',
+                                   'P_64B',
+                                   'P_42B',
+                                   'P_273_39',
+                                   'P_196F1',
+                                   'P_273_21',
+                                   'P_175_23',
+                                   'P_273_37',
+                                   'P_273_13',
+                                   'P_273_40',
+                                   'P_273_09',
+                                   'P_196F2',
+                                   'P_175_09',
+                                   'P_181',
+                                   'P_C04',
+                                   'P_273_15',
+                                   'P_23B',
+                                   'P_175_06',
+                                   'P_175_10',
+                                   'P_175_18',
+                                   'P_273_03',
+                                   'P_56B',
+                                   'P_175_12',
+                                   'P_181F1',
+                                   'P_175_19',
+                                   'P_175_33',
+                                   'P_196',
+                                   'P_31B',
+                                   'P_67B',
+                                   'P_38B',
+                                   'P_273_22',
+                                   'P_175_27',
+                                   'P_273_38',
+                                   'P_C08',
+                                   'P_09B',
+                                   'P_12B'
+                                 ]
+                      },
+          'germline_resource' => '/data/cqs/references/broad/hg38/af-only-gnomad.hg38.vcf.gz',
+          'perform_target_coverage' => 0,
+          'annovar_param' => '-protocol refGene,avsnp150,cosmic70,exac03,1000g2015aug_all,1000g2015aug_afr,1000g2015aug_amr,1000g2015aug_eas,1000g2015aug_eur,1000g2015aug_sas,gnomad211_genome,clinvar_20190305 -operation g,f,f,f,f,f,f,f,f,f,f,f --remove',
+          'muTect_jar' => '/opt/mutect-1.1.7.jar',
+          'chipqc_docker_command' => 'singularity exec -c -B /gpfs23,/scratch,/gpfs52,/data,/home,/tmp -e /data/cqs/softwares/singularity/cqs-chipseq.chipqc.simg ',
+          'subdir' => 0,
+          'chipqc_chromosomes' => 'chr1,chr2,chr3,chr4,chr5,chr6,chr7,chr8,chr9,chr10,chr11,chr12,chr13,chr14,chr15,chr16,chr17,chr18,chr19,chr20,chr21,chr22',
+          'homer_genome' => 'hg38',
+          'g1000' => '/data/cqs/references/broad/hg38/v0/1000G_phase1.snps.high_confidence.hg38.vcf.gz',
+          'Mutect2.run_orientation_bias_mixture_model_filter' => 'true',
+          'ncbi_build' => 'GRCh38',
+          'files' => {
+                       'P_60B' => [
+                                    '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-20-CCTCACGA-GACGAGAT_S01_L001_R1_001.fastq.gz',
+                                    '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-20-CCTCACGA-GACGAGAT_S01_L001_R2_001.fastq.gz'
+                                  ],
+                       'P_64B' => [
+                                    '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-8-CGCAGTGG-TAAGCATC_S01_L001_R1_001.fastq.gz',
+                                    '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-8-CGCAGTGG-TAAGCATC_S01_L001_R2_001.fastq.gz'
+                                  ],
+                       'P_42B' => [
+                                    '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-18-GAATTACA-TGCCGACA_S01_L001_R1_001.fastq.gz',
+                                    '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-18-GAATTACA-TGCCGACA_S01_L001_R2_001.fastq.gz'
+                                  ],
+                       'P_273_39' => [
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-35-CTTAAGTC-CCTGACCA_S01_L001_R1_001.fastq.gz',
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-35-CTTAAGTC-CCTGACCA_S01_L001_R2_001.fastq.gz'
+                                     ],
+                       'P_196F1' => [
+                                      '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-4-AACTCGCC-GCCTTGCG_S01_L001_R1_001.fastq.gz',
+                                      '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-4-AACTCGCC-GCCTTGCG_S01_L001_R2_001.fastq.gz'
+                                    ],
+                       'P_273_21' => [
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-30-ACAACTAC-CTGTGGTG_S01_L001_R1_001.fastq.gz',
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-30-ACAACTAC-CTGTGGTG_S01_L001_R2_001.fastq.gz'
+                                     ],
+                       'P_175_23' => [
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-26-CAATAGGA-GCGGCTTA_S01_L001_R1_001.fastq.gz',
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-26-CAATAGGA-GCGGCTTA_S01_L001_R2_001.fastq.gz'
+                                     ],
+                       'P_273_37' => [
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-33-CTGCGTTA-AAGGCCAC_S01_L001_R1_001.fastq.gz',
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-33-CTGCGTTA-AAGGCCAC_S01_L001_R2_001.fastq.gz'
+                                     ],
+                       'P_273_13' => [
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-29-GTGGTCGT-TCACAACA_S01_L001_R1_001.fastq.gz',
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-29-GTGGTCGT-TCACAACA_S01_L001_R2_001.fastq.gz'
+                                     ],
+                       'P_273_40' => [
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-36-TCCGGACT-TTCAGTTG_S01_L001_R1_001.fastq.gz',
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-36-TCCGGACT-TTCAGTTG_S01_L001_R2_001.fastq.gz'
+                                     ],
+                       'P_273_09' => [
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-37-GGCCTTGC-CGCATTCC_S01_L001_R1_001.fastq.gz',
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-37-GGCCTTGC-CGCATTCC_S01_L001_R2_001.fastq.gz'
+                                     ],
+                       'P_196F2' => [
+                                      '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-5-CTGTCACT-GCTCTTAA_S01_L001_R1_001.fastq.gz',
+                                      '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-5-CTGTCACT-GCTCTTAA_S01_L001_R2_001.fastq.gz'
+                                    ],
+                       'P_175_09' => [
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-11-GCGCATGC-GTGGACAA_S01_L001_R1_001.fastq.gz',
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-11-GCGCATGC-GTGGACAA_S01_L001_R2_001.fastq.gz'
+                                     ],
+                       'P_181' => [
+                                    '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-1-GGTACCGA-GTGGTATC_S01_L001_R1_001.fastq.gz',
+                                    '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-1-GGTACCGA-GTGGTATC_S01_L001_R2_001.fastq.gz'
+                                  ],
+                       'P_C04' => [
+                                    '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-31-GGCTCGAG-GAACTGAG_S01_L001_R1_001.fastq.gz',
+                                    '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-31-GGCTCGAG-GAACTGAG_S01_L001_R2_001.fastq.gz'
+                                  ],
+                       'P_273_15' => [
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-38-AATTCCAT-TATGCCTT_S01_L001_R1_001.fastq.gz',
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-38-AATTCCAT-TATGCCTT_S01_L001_R2_001.fastq.gz'
+                                     ],
+                       'P_23B' => [
+                                    '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-7-TATGACAA-CGGATGCT_S01_L001_R1_001.fastq.gz',
+                                    '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-7-TATGACAA-CGGATGCT_S01_L001_R2_001.fastq.gz'
+                                  ],
+                       'P_175_06' => [
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-10-GACGCATC-GGTAACTC_S01_L001_R1_001.fastq.gz',
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-10-GACGCATC-GGTAACTC_S01_L001_R2_001.fastq.gz'
+                                     ],
+                       'P_175_10' => [
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-12-ATATGCAT-ACAAGTGG_S01_L001_R1_001.fastq.gz',
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-12-ATATGCAT-ACAAGTGG_S01_L001_R2_001.fastq.gz'
+                                     ],
+                       'P_175_18' => [
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-13-GGAGTGCC-TCCTGGTT_S01_L001_R1_001.fastq.gz',
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-13-GGAGTGCC-TCCTGGTT_S01_L001_R2_001.fastq.gz'
+                                     ],
+                       'P_273_03' => [
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-28-TGTGATAA-AGAGGCAA_S01_L001_R1_001.fastq.gz',
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-28-TGTGATAA-AGAGGCAA_S01_L001_R2_001.fastq.gz'
+                                     ],
+                       'P_56B' => [
+                                    '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-19-TTCTGTAG-AGTAGAGC_S01_L001_R1_001.fastq.gz',
+                                    '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-19-TTCTGTAG-AGTAGAGC_S01_L001_R2_001.fastq.gz'
+                                  ],
+                       'P_175_12' => [
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-24-ATGGCGCC-AGTCAGAC_S01_L001_R1_001.fastq.gz',
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-24-ATGGCGCC-AGTCAGAC_S01_L001_R2_001.fastq.gz'
+                                     ],
+                       'P_181F1' => [
+                                      '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-2-AACGTTAG-ACAACGCT_S01_L001_R1_001.fastq.gz',
+                                      '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-2-AACGTTAG-ACAACGCT_S01_L001_R2_001.fastq.gz'
+                                    ],
+                       'P_175_19' => [
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-25-TGGCGAAG-ATAATCCG_S01_L001_R1_001.fastq.gz',
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-25-TGGCGAAG-ATAATCCG_S01_L001_R2_001.fastq.gz'
+                                     ],
+                       'P_175_33' => [
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-27-CACAGCGG-GAGAATGG_S01_L001_R1_001.fastq.gz',
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-27-CACAGCGG-GAGAATGG_S01_L001_R2_001.fastq.gz'
+                                     ],
+                       'P_196' => [
+                                    '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-3-GGTCTATT-ATTCCATA_S01_L001_R1_001.fastq.gz',
+                                    '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-3-GGTCTATT-ATTCCATA_S01_L001_R2_001.fastq.gz'
+                                  ],
+                       'P_31B' => [
+                                    '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-16-CTAGATTG-CTATCGCA_S01_L001_R1_001.fastq.gz',
+                                    '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-16-CTAGATTG-CTATCGCA_S01_L001_R2_001.fastq.gz'
+                                  ],
+                       'P_67B' => [
+                                    '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-9-AGTATGCT-AACGGTCT_S01_L001_R1_001.fastq.gz',
+                                    '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-9-AGTATGCT-AACGGTCT_S01_L001_R2_001.fastq.gz'
+                                  ],
+                       'P_38B' => [
+                                    '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-17-AGGCCGTG-CATTAGTG_S01_L001_R1_001.fastq.gz',
+                                    '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-17-AGGCCGTG-CATTAGTG_S01_L001_R2_001.fastq.gz'
+                                  ],
+                       'P_273_22' => [
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-22-TTAACGGT-TACATCCA_S01_L001_R1_001.fastq.gz',
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-22-TTAACGGT-TACATCCA_S01_L001_R2_001.fastq.gz'
+                                     ],
+                       'P_175_27' => [
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-32-AATCTAGA-AGGTCAGA_S01_L001_R1_001.fastq.gz',
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-32-AATCTAGA-AGGTCAGA_S01_L001_R2_001.fastq.gz'
+                                     ],
+                       'P_273_38' => [
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-34-TCATACCG-GGAATTGT_S01_L001_R1_001.fastq.gz',
+                                       '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-34-TCATACCG-GGAATTGT_S01_L001_R2_001.fastq.gz'
+                                     ],
+                       'P_C08' => [
+                                    '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-6-TCACTGTC-ATCTCCGG_S01_L001_R1_001.fastq.gz',
+                                    '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-6-TCACTGTC-ATCTCCGG_S01_L001_R2_001.fastq.gz'
+                                  ],
+                       'P_09B' => [
+                                    '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-14-AAGACATT-CTTCAACC_S01_L001_R1_001.fastq.gz',
+                                    '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-14-AAGACATT-CTTCAACC_S01_L001_R2_001.fastq.gz'
+                                  ],
+                       'P_12B' => [
+                                    '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-15-TCGAGCCA-TCGCTATG_S01_L001_R1_001.fastq.gz',
+                                    '/data/cqs/jennifer_pietenpol/20190905_3772/3772-LR-15-TCGAGCCA-TCGCTATG_S01_L001_R2_001.fastq.gz'
+                                  ]
+                     },
+          'perform_dedup_fastq' => 1,
+          'remove_sequences' => '',
+          'gatk4_cnv_by_scatter' => 1,
+          'cluster' => 'slurm',
+          'bamsnap_option' => '--no_gene_track',
+          'panel_of_normals' => '/data/h_vangard_1/references/broad/gatk-best-practices/somatic-hg38/1000g_pon.hg38.vcf.gz',
+          'perform_check_fastq_duplicate' => 1,
+          'min_read_length' => 30,
+          'perform_gatk4_pairedfastq2bam' => 0,
+          'species' => 'homo_sapiens',
+          'interval_list_file' => '/data/cqs/references/broad/hg38/v0/hg38_wgs_scattered_calling_intervals.txt',
+          'SNV_Index' => 8,
+          'filter_variants_by_allele_frequency_maf' => '0.3',
+          'singularity_image_files' => {
+                                         'gatk.latest.simg' => '/data/cqs/softwares/singularity/gatk.4.1.8.1.simg',
+                                         'python.latest.simg' => '/data/cqs/softwares/singularity/python.2.7.simg',
+                                         'broadinstitute.gotc.latest.simg' => '/data/cqs/softwares/singularity/genomes-in-the-cloud.2.4.5-1590104571.simg',
+                                         'gotc.latest.simg' => '/data/cqs/softwares/singularity/genomes-in-the-cloud.2.4.5-1590104571.simg',
+                                         'broadinstitute.gatk.latest.simg' => '/data/cqs/softwares/singularity/gatk.4.1.8.1.simg'
+                                       },
+          'perform_gatk_callvariants' => 0,
+          'merge_fastq' => 0,
+          'filter_variants_by_allele_frequency' => 1,
+          'perform_preprocessing' => 1,
+          'perform_annovar' => 1,
+          'check_file_exists' => 1,
+          'bamplot_option' => '-g HG38 -y uniform -r --save-temp',
+          'perform_gatk4_callvariants' => 1,
+          'constraint' => 'haswell',
+          'sequencetask_run_time' => '12',
+          'task_name' => 'lindsay_exomeseq_3772',
+          'transcript_gtf' => '/data/cqs/references/broad/hg38/v0/gencode.v27.primary_assembly.annotation.gtf',
+          'cnv_xhmm_preprocess_intervals' => 0,
+          'gotc_docker_command' => 'singularity exec -c -B /gpfs23,/scratch,/gpfs52,/data,/home,/tmp -e /data/cqs/softwares/singularity/gotc.latest.simg ',
+          'is_paired_end' => 1,
+          'fastq_remove_N' => 0,
+          'emailType' => 'FAIL',
+          'debug' => 1,
+          'vep_path' => '/scratch/cqs/softwares/ensembl-vep',
+          'bwa_option' => '',
+          'variants_for_contamination' => '/data/h_vangard_1/references/broad/gatk-best-practices/somatic-hg38/small_exac_common_3.hg38.vcf.gz',
+          'perform_muTect2indel' => 0,
+          'sratoolkit_setting_file' => '/scratch/cqs_share/softwares/cqsperl/config/vdb-config/user-settings.mkfg',
+          'hapmap_file' => '/data/cqs/references/hg38/hg38_hapmap.txt',
+          'has_chr_in_chromosome_name' => 1,
+          'gatk4_variant_filter_by_chromosome' => 1,
+          'ref_fasta' => '/data/cqs/references/broad/hg38/v0/Homo_sapiens_assembly38.fasta',
+          'perform_cutadapt' => 1,
+          'target_dir' => '/scratch/cqs/shengq2/jennifer/20200407_lindsay_exomeseq_3772_hg38',
+          'table_vis_group_text_size' => '10',
+          'perform_muTect' => 0,
+          'BWA_docker_command' => 'singularity exec -c -B /gpfs23,/scratch,/gpfs52,/data,/home,/tmp -e /data/cqs/softwares/singularity/cqs-exomeseq.simg ',
+          'annotation_genes' => 'TP53 ATM BARD1 BRCA1 BRCA2 BRIP1 CDH1 CHEK2 MSH6 NBN NF1 PALB2 PTEN RAD51C RAD51D CDKN2A',
+          'cutadapt_option' => '-n 2 -O 1 -q 20 -a AGATCGGAAGAGCACACGTC -A AGATCGGAAGAGCGTCGTGT -m 30',
+          'perform_cnv_gatk4_cohort' => 1,
+          'contig_ploidy_priors_file' => '/data/cqs/references/broad/hg38/contig_ploidy_priors_homo_sapiens.chr.tsv',
+          'email' => 'quanhu.sheng.1@vumc.org',
+          'perform_cnv_cnMOPs' => 0,
+          'annovar_db' => '/data/cqs/references/annovar/humandb/',
+          'perform_extract_bam' => 0,
+          'plotCNVGenes' => 1,
+          'bamsnap_docker_command' => 'singularity exec -c -B /gpfs23,/scratch,/gpfs52,/data,/home,/tmp -e /data/cqs/softwares/singularity/bamsnap.simg ',
+          'remove_duplicate' => 1,
+          'perform_cnv_gatk4_somatic' => 0,
+          'filter_variants_by_allele_frequency_percentage' => '0.9',
+          'hapmap' => '/data/cqs/references/broad/hg38/v0/hapmap_3.3.hg38.vcf.gz',
+          'bwa_fasta' => '/data/cqs/references/broad/hg38/v0/bwa_index_0.7.17/Homo_sapiens_assembly38.fasta',
+          'mafreport_docker_command' => 'singularity exec -c -B /gpfs23,/scratch,/gpfs52,/data,/home,/tmp -e /data/cqs/softwares/singularity/mafreport.simg ',
+          'omni' => '/data/cqs/references/broad/hg38/v0/1000G_omni2.5.hg38.vcf.gz',
+          'chromosome_names' => 'chr1,chr2,chr3,chr4,chr5,chr6,chr7,chr8,chr9,chr10,chr11,chr12,chr13,chr14,chr15,chr16,chr17,chr18,chr19,chr20,chr21,chr22,chrX,chrY,chrM',
+          'picard_jar' => '/opt/picard.jar',
+          'gatk4_scatter_count' => 0,
+          'gatk3_jar' => '/opt/gatk3.jar',
+          'perform_vep' => 0,
+          'mills' => '/data/cqs/references/broad/hg38/v0/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz',
+          'filter_soft_clip' => 1,
+          'perform_multiqc' => 0,
+          'enhancer_cpg_path' => '/data/cqs/references/mappable_region/hg38/hg38_cpg_islands.bed',
+          'perform_IBS' => 0,
+          'dbsnp' => '/data/cqs/references/broad/hg38/v0/Homo_sapiens_assembly38.dbsnp138.vcf.gz',
+          'gatk4_docker_command' => 'singularity exec -c -B /gpfs23,/scratch,/gpfs52,/data,/home,/tmp -e /data/cqs/softwares/singularity/cqs-gatk4.simg ',
+          'aligner' => 'bwa',
+          'vep_data' => '/scratch/cqs/references/vep_data',
+          'wdl' => {
+                     'local' => {
+                                  'CollectAllelicCounts' => {
+                                                              'wdl_file' => '/home/zhaos/source/ngsperl/lib/WDL/ExomeSeq/CollectAllelicCounts.wdl',
+                                                              'input_file' => '/home/zhaos/source/ngsperl/lib/WDL/ExomeSeq/CollectAllelicCounts.wdl.json'
+                                                            },
+                                  'paired_fastq_to_processed_bam' => {
+                                                                       'input_file' => '/data/cqs/softwares/cqsperl/config/wdl/processing-for-variant-discovery-gatk4.hg38.wgs.inputs.json',
+                                                                       'wdl_file' => '/data/cqs/softwares/cqsperl/config/wdl/processing-for-variant-discovery-gatk4-fromPairEndFastq.wdl'
+                                                                     },
+                                  'mutect2' => {
+                                                 'input_file' => '/data/cqs/softwares/cqsperl/data/wdl/local/mutect2.inputs.hg38.json',
+                                                 'wdl_file' => '/data/cqs/softwares/gatk/scripts/mutect2_wdl/mutect2.wdl',
+                                                 'perform_mutect2_pon' => 0
+                                               },
+                                  'somaticCNV_pon' => {
+                                                        'input_file' => '/home/zhaos/source/perl_cqs/workflow/gatk-scripts-cnv_wdl-somatic/cnv_somatic_panel_workflow.wdl.json',
+                                                        'wdl_file' => '/scratch/cqs/zhaos/tools/gatk/scripts/cnv_wdl/somatic/cnv_somatic_panel_workflow.wdl'
+                                                      },
+                                  'haplotypecaller' => {
+                                                         'wdl_file' => '/data/cqs/softwares/gatk-workflows/gatk4-germline-snps-indels/haplotypecaller-gvcf-gatk4.wdl'
+                                                       },
+                                  'cromwell_config_file' => '/data/cqs/softwares/cromwell/cromwell.examples.local.conf',
+                                  'paired_fastq_to_unmapped_bam' => {
+                                                                      'wdl_file' => '/data/cqs/softwares/gatk-workflows/seq-format-conversion/paired-fastq-to-unmapped-bam.wdl',
+                                                                      'input_file' => '/data/cqs/softwares/gatk-workflows/seq-format-conversion/paired-fastq-to-unmapped-bam.inputs.json'
+                                                                    },
+                                  'somaticCNV' => {
+                                                    'wdl_file' => '/scratch/cqs/zhaos/tools/gatk/scripts/cnv_wdl/somatic/cnv_somatic_pair_workflow.wdl',
+                                                    'input_file' => '/home/zhaos/source/perl_cqs/workflow/gatk-scripts-cnv_wdl-somatic/cnv_somatic_pair_workflow.wdl.json'
+                                                  },
+                                  'mutect2_pon' => {
+                                                     'wdl_file' => '/data/cqs/softwares/gatk/scripts/mutect2_wdl/mutect2_pon.wdl',
+                                                     'input_file' => '/data/cqs/softwares/cqsperl/data/wdl/local/mutect2_pon.inputs.hg38.json'
+                                                   }
+                                },
+                     'cromwell_option_file' => '/data/cqs/softwares/cromwell/cromwell.options.json',
+                     'cromwell_jar' => '/data/cqs/softwares/cromwell/cromwell-64.jar'
+                   },
+          'docker_command' => 'singularity exec -c -B /gpfs23,/scratch,/gpfs52,/data,/home,/tmp -e /data/cqs/softwares/singularity/cqs-exomeseq.simg ',
+          'VERSION' => '0.01',
+          'perform_cnv_xhmm' => 0,
+          'biomart_dataset' => 'hsapiens_gene_ensembl',
+          'onco_options' => {
+                              'TRUNC_height' => '0.45',
+                              'DUP_color' => 'red',
+                              'DUP_height' => '0.25',
+                              'picture_height' => '0',
+                              'MANUAL_order' => 1,
+                              'picture_width' => '0',
+                              'DEL_color' => 'blue',
+                              'DEL_height' => '0.25',
+                              'MISSENSE_height' => '0.75',
+                              'TRUNC_color' => 'black',
+                              'sampleNamePattern' => '.',
+                              'BACKGROUND_color' => 'lightgray',
+                              'MISSENSE_color' => 'lightblue'
+                            },
+          'biomart_host' => 'www.ensembl.org',
+          'perform_fastqc' => 1,
+          'muTect2_option' => '--downsampling-stride 20 --max-reads-per-alignment-start 6 --max-suspicious-reads-per-alignment-start 6',
+          'macs2_genome' => 'hs',
+          'perform_cutadapt_test' => 0,
+          'indel_realignment' => 1,
+          'known_indels_sites_VCFs' => [
+                                         '/data/cqs/references/broad/hg38/v0/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz',
+                                         '/data/cqs/references/broad/hg38/v0/Homo_sapiens_assembly38.known_indels.vcf.gz'
+                                       ],
+          'sra_to_fastq' => 0,
+          'perform_CrosscheckFingerprints' => 0,
+          'max_thread' => 8,
+          'annovar_buildver' => 'hg38',
+          'docker_init' => '',
+          'annovar_filter' => '--exac_key ExAC_ALL --g1000_key 1000g2015aug_all --gnomad_key AF',
+          'bamplot_docker_command' => 'singularity exec -c -B /gpfs23,/scratch,/gpfs52,/data,/home,/tmp -e /data/cqs/softwares/singularity/bamplot.simg ',
+          'perform_muTect2' => 0,
+          'biomart_symbolKey' => 'hgnc_symbol',
+          'axiomPoly' => '/data/cqs/references/broad/hg38/v0/Axiom_Exome_Plus.genotypes.all_populations.poly.hg38.vcf.gz',
+          'callvariants_vqsr_mode' => 1,
+          'gatk4_cnv_scatter_count' => 100,
+          'gatk_callvariants_vqsr_mode' => 1,
+          'filter_variants_fq_equal_1' => 1,
+          'ref_fasta_dict' => '/data/cqs/references/broad/hg38/v0/Homo_sapiens_assembly38.dict',
+          'onco_sample_groups' => {
+                                    'MCF10A' => [
+                                                  'P_C04',
+                                                  'P_175_27',
+                                                  'P_273_37',
+                                                  'P_273_38',
+                                                  'P_273_39',
+                                                  'P_273_40',
+                                                  'P_175_12',
+                                                  'P_175_19',
+                                                  'P_175_23',
+                                                  'P_175_33',
+                                                  'P_273_03',
+                                                  'P_273_09',
+                                                  'P_273_13',
+                                                  'P_273_15',
+                                                  'P_273_21'
+                                                ],
+                                    'CAL51' => [
+                                                 'P_C08',
+                                                 'P_23B',
+                                                 'P_64B',
+                                                 'P_67B',
+                                                 'P_181',
+                                                 'P_196',
+                                                 'P_196F1',
+                                                 'P_196F2',
+                                                 'P_181F1',
+                                                 'P_175_09',
+                                                 'P_175_18',
+                                                 'P_175_10',
+                                                 'P_175_06',
+                                                 'P_12B',
+                                                 'P_38B',
+                                                 'P_31B',
+                                                 'P_09B',
+                                                 'P_42B',
+                                                 'P_60B',
+                                                 'P_56B',
+                                                 'P_273_22'
+                                               ]
+                                  },
+          'bamsnap_raw_option' => {
+                                    '-refversion' => 'hg38'
+                                  },
+          'blacklist_file' => '/data/cqs/references/blacklist_files/hg38-blacklist.v2.bed',
+          'chipqc_genome' => 'hg38',
+          'vcf2maf_pl' => '/scratch/cqs/softwares/mskcc-vcf2maf/vcf2maf.pl',
+          'perform_cnv' => 1
+        };

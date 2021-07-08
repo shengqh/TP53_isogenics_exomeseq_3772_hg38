@@ -1,0 +1,52 @@
+#!/bin/bash
+#SBATCH --mail-user=quanhu.sheng.1@vumc.org
+#SBATCH --mail-type=FAIL
+#SBATCH --nodes=1
+#SBATCH --ntasks=2
+#SBATCH --time=4:00:00
+#SBATCH --mem=5G
+#SBATCH --constraint=haswell
+#SBATCH -o /scratch/cqs/shengq2/jennifer/20200407_lindsay_exomeseq_3772_hg38/fastqc_raw/log/P_181_fq.log
+
+if [ -n "${SLURM_JOB_ID}" ] ; then
+  smemwatch -k 99 -d 50 $$ &
+fi
+
+
+
+
+
+
+set -o pipefail
+
+cd '/scratch/cqs/shengq2/jennifer/20200407_lindsay_exomeseq_3772_hg38/fastqc_raw/result/P_181'
+
+
+if [[ !(1 -eq $1) ]]; then
+  if [[ ( -s /scratch/cqs/shengq2/jennifer/20200407_lindsay_exomeseq_3772_hg38/fastqc_raw/result/P_181/P_181.dedup.1_fastqc/fastqc_data.txt && -s /scratch/cqs/shengq2/jennifer/20200407_lindsay_exomeseq_3772_hg38/fastqc_raw/result/P_181/P_181.dedup.2_fastqc/fastqc_data.txt ) || ( -d /scratch/cqs/shengq2/jennifer/20200407_lindsay_exomeseq_3772_hg38/fastqc_raw/result/P_181/P_181.dedup.1_fastqc/fastqc_data.txt && -d /scratch/cqs/shengq2/jennifer/20200407_lindsay_exomeseq_3772_hg38/fastqc_raw/result/P_181/P_181.dedup.2_fastqc/fastqc_data.txt ) ]]; then
+    echo job has already been done. if you want to do again, delete /scratch/cqs/shengq2/jennifer/20200407_lindsay_exomeseq_3772_hg38/fastqc_raw/result/P_181/P_181.dedup.1_fastqc/fastqc_data.txt and submit job again.
+    exit 0
+  fi
+fi
+
+if [[ ! -s /scratch/cqs/shengq2/jennifer/20200407_lindsay_exomeseq_3772_hg38/dedup_fastq/result/P_181.dedup.1.fastq.gz ]]; then
+  echo input file not exist: /scratch/cqs/shengq2/jennifer/20200407_lindsay_exomeseq_3772_hg38/dedup_fastq/result/P_181.dedup.1.fastq.gz
+  exit 1
+fi
+
+echo QC::FastQC_start=`date`
+echo working in /scratch/cqs/shengq2/jennifer/20200407_lindsay_exomeseq_3772_hg38/fastqc_raw/result/P_181 ...
+ 
+
+export R_LIBS=
+export PYTHONPATH=
+export JAVA_HOME=
+ 
+
+
+singularity exec -c -B /gpfs23,/scratch,/gpfs52,/data,/home,/tmp -e /data/cqs/softwares/singularity/cqs-exomeseq.simg  bash /scratch/cqs/shengq2/jennifer/20200407_lindsay_exomeseq_3772_hg38/fastqc_raw/pbs/P_181_fq.pbs.sh 
+
+echo QC::FastQC_end=`date`
+
+exit 0
+
