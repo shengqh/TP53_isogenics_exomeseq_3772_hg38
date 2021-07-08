@@ -23,7 +23,7 @@ We used hg38 v0 genome from BROAD Institute in our data analysis. You may downlo
 gsutil -m cp -r gs://gcp-public-data--broad-references/hg38/v0 .
 ```
 
-Three other essential files used in analysis were uploaded to [references](https://github.com/shengqh/TP53_isogenics_exomeseq_3772_hg38/references) folder in this repository.
+Three other essential files used in analysis were uploaded to [references](https://github.com/shengqh/TP53_isogenics_exomeseq_3772_hg38/tree/main/references) folder in this repository.
 
 ```
 hg38_cpg_islands.bed
